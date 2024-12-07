@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Style/Product.css'; // Assuming you have a CSS file for stylin
+import '../Style/product.css'; // Assuming you have a CSS file for stylin
 const Product = () => {
     return (
         <div className="product-page">
