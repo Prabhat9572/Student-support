@@ -6,6 +6,7 @@ import Schedule from './components/Schedule';
 import Home from './components/Home';
 import Speakers from './components/Speakers';
 import Contact from './components/Contact'; // Import Contact component
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
       <div>
         {/* Rendering Header component */}
         <Header />
+
+       
         
         {/* Defining Routes for different sections */}
         <Routes>
@@ -27,6 +30,9 @@ const App = () => {
 
         {/* Include the Contact Section */}
         <Contact />
+
+        {/* footer section */}
+        <Footer />
       </div>
     </Router>
   );
