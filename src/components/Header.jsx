@@ -39,9 +39,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <div className="cta-button">
-          <a href="#register" className="btn-register">Sign In</a>
-        </div>
+       
       </div>
     </header>
   );

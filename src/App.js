@@ -8,6 +8,7 @@ import Speakers from './components/Speakers';
 import Contact from './components/Contact'; // Ensure Contact component exists and path is correct
 import Footer from './components/Footer';
 import Product from './components/product'; // Use Product (singular) here
+import Courses from './Pages/Courses';
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
       <div>
         {/* Rendering Header component */}
         <Header />
+
+        
 
        
 
@@ -28,6 +31,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/product" element={<Product />} /> Use Product here
         </Routes>
+        <Courses/>
 
         {/* footer section */}
         <Footer />
