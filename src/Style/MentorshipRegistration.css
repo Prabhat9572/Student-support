@@ -1,0 +1,199 @@
+/* Main container */
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+  padding: 0 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.left-text {
+  flex: 1;
+  padding: 20px;
+  color: #333;
+  min-width: 300px; /* Ensures text section does not shrink too much */
+}
+
+.left-text h1 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.left-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.form-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px; /* Ensures form doesn't become too narrow */
+}
+
+.form-title {
+  font-size: 1.8rem;
+  color: #003366;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #003366;
+  box-shadow: 0 0 8px rgba(0, 51, 102, 0.2);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #003366;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.submit-btn:hover {
+  background-color: #005b99;
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 30px;
+  }
+
+  .left-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .left-text p {
+    font-size: 1rem;
+  }
+
+  .form-title {
+    font-size: 1.6rem;
+  }
+
+  .input-group input {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .left-text {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .left-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .left-text p {
+    font-size: 1rem;
+  }
+
+  .form-container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .form-title {
+    font-size: 1.4rem;
+  }
+
+  .input-group input {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .left-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .left-text p {
+    font-size: 0.9rem;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+  }
+
+  .input-group input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}

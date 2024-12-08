@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../Style/Courses.css';
 
 const Courses = () => {
+  const navigate = useNavigate();
+
   const subjects = [
     {
       name: 'Computer Science',
@@ -12,6 +15,7 @@ const Courses = () => {
         'Machine Learning',
         'Cybersecurity',
       ],
+      route: '/computer-science',
     },
     {
       name: 'Business & Management',
@@ -22,21 +26,19 @@ const Courses = () => {
         'Project Management',
         'Entrepreneurship',
       ],
+      route: '/business-management',
     },
     {
       name: 'Engineering',
       image: 'https://cdn-icons-png.flaticon.com/512/141/141372.png',
       courses: [
-        'Thermodynamics',
-        'Control Systems',
         'Embedded Systems',
-        'Material Science',
         'Robotics',
         'Civil Engineering Basics',
         'Electrical Circuits and Devices',
-        'Structural Engineering',
         'Environmental Engineering',
       ],
+      route: '/engineering',
     },
     {
       name: 'Arts & Humanities',
@@ -44,20 +46,29 @@ const Courses = () => {
       courses: [
         'Creative Writing',
         'Art History',
-        'Philosophy',
         'Photography',
         'Music Theory',
         'Film Studies',
       ],
+      route: '/arts-humanities',
     },
   ];
+
+  const handleCardClick = (route) => {
+    navigate(route);
+  };
 
   return (
     <div className="courses-container">
       <h2 className="section-heading">Courses Based on Subjects</h2>
       <div className="subjects-list">
         {subjects.map((subject, index) => (
-          <div key={index} className="subject-card">
+          <div
+            key={index}
+            className="subject-card"
+            onClick={() => handleCardClick(subject.route)} // Navigate to route on click
+            style={{ cursor: 'pointer' }} // Make cursor pointer
+          >
             <img src={subject.image} alt={subject.name} className="subject-image" />
             <h3>{subject.name}</h3>
             <ul>

@@ -1,15 +1,16 @@
 /* Main Container */
 .home-container {
-  font-family: Arial, sans-serif;
-  color: #fff;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #ffffff;
   background-color: #121212;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(to right, #d88cf2, #f69c0c);
-  padding: 50px 20px;
+  background: linear-gradient(90deg, #d88cf2, #f69c0c);
+  padding: 60px 20px;
 }
 
 .hero-content {
@@ -27,51 +28,54 @@
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
+  color: #ffdd59;
 }
 
 .hero-text h1 span {
-  color: #ffdd59;
+  color: #2316d7;
 }
 
 .hero-text p {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  color: #f0f0f0;
 }
 
 .cta-button {
-  background-color: #2316d7;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 1rem;
+  background-color: #0078ff;
+  color: #ffffff;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #c721f1;
+  background-color: #f031c6;
+  transform: translateY(-3px);
 }
 
 .image-slider {
   flex: 1;
   position: relative;
   text-align: center;
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .image-slider img {
   width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 .slider-controls {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -79,88 +83,125 @@
 }
 
 .slider-controls button {
-  background-color: #121212;
-  color: #fff;
-  border: 1px solid #fff;
+  background-color: hsl(0, 0%, 1%);
+  color: white;
+  border: none;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .slider-controls button:hover {
   background-color: #ff7e5f;
-  border-color: #ff7e5f;
+  color: #ffffff;
 }
 
-/* Highlights Section */
-.highlights-section {
-  padding: 40px 20px;
-  text-align: center;
+.mentorship-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
   background-color: lavender;
 }
 
-.section-heading {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #feb47b;
-}
-
-.program-highlight {
+.mentorship-content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
 }
 
-.program-info,
-.program-details {
-  background: #333;
-  padding: 20px;
+.mentorship-image img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
   border-radius: 8px;
-  flex: 1 1 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.mentorship-text {
+  max-width: 500px;
+}
+
+.mentorship-text h2 {
+  font-size: 2rem;
+  color: black;
+}
+
+.mentorship-text p {
+  font-size: 1rem;
+  color: black;
+  margin-top: 1rem;
+}
+
+.explore-button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #0056b3;
+}
+
+
+
 
 /* Courses Section */
 .courses-container {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
+  padding: 60px 20px;
+  background: linear-gradient(120deg, hwb(120 97% 2%), #efe2f5);
+  color: white;
 }
 
 .subjects-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 20px; /* Reduced gap for a more compact layout */
 }
 
 .subject-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  background-color: hsla(163, 87%, 9%, 0.936);
+  border: 1px solid #13010133;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
+  width: 200px; /* Reduced width for a smaller card */
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .subject-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Slightly reduced hover movement */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
 }
 
 .subject-image {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
+  width: 80px; /* Reduced size of the image */
+  height: 80px;
+  object-fit: cover;
   margin-bottom: 15px;
+  border-radius: 50%;
 }
 
 .subject-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #0073e6;
+  font-size: 1.3rem; /* Slightly smaller font for title */
+  margin-bottom: 10px;
+  color: #ffd700;
+  text-transform: uppercase; /* Added uppercase for a more dynamic look */
+  letter-spacing: 1px; /* Added spacing for readability */
 }
 
 .subject-card ul {
@@ -169,32 +210,77 @@
 }
 
 .subject-card ul li {
-  font-size: 1rem;
-  margin: 10px 0;
-  color: #555;
+  font-size: 0.85rem; /* Smaller font for list items */
+  margin: 6px 0;
+  color: #ffffff;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
+.subject-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px; /* Slightly reduced padding */
+  margin-top: 10px;
+  border-radius: 25px; /* Rounded edges for a modern touch */
+  cursor: pointer;
+  font-size: 12px; /* Smaller button text */
+  transition: background-color 0.3s ease;
+}
 
-  .hero-text {
-    padding: 0;
-  }
+.subject-button:hover {
+  background-color: #45a049;
+}
 
-  .image-slider {
-    margin-top: 20px;
-  }
-
-  .program-highlight {
-    flex-direction: column;
-  }
-
+@media (max-width: 992px) {
   .subject-card {
-    width: 100%;
-    max-width: 300px;
+    width: 180px; /* Further reduced size for tablets */
+    max-width: 250px; /* Maximum width limit */
   }
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .subject-card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .subject-card h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Buttons for Subject Cards */
+.subject-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.subject-button:hover {
+  background-color: #45a049;
 }

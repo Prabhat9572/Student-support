@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import for navigation
+import Courses from '../Pages/Courses'; // Update the path if necessary
+import Mentorship from '../Pages/Mentorship';
+
 import '../Style/Home.css';
 
 const Home = () => {
+  const navigate = useNavigate(); // Hook for programmatic navigation
+
   const images = [
     'https://cdn-blog.novoresume.com/articles/student-services-specialist/bg.png',
     'https://cmsv2-assets.apptegy.net/uploads/2799/file/1680619/b8e19e3c-760b-41c9-8d3d-336f53a12b56.png',
@@ -10,12 +16,12 @@ const Home = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Automatic scroll functionality
+  // Automatic image slider
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
-    return () => clearInterval(interval); // Cleanup the interval on component unmount
+    }, 3000); // Switch image every 3 seconds
+    return () => clearInterval(interval); // Cleanup interval on unmount
   }, [images.length]);
 
   const nextImage = () => {
@@ -23,9 +29,21 @@ const Home = () => {
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1)
     );
+  };
+
+  const handleNavigate = (path) => {
+    navigate(path); // Navigate to the specified path
+  };
+
+  // Function to scroll to a section smoothly
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -38,16 +56,16 @@ const Home = () => {
               Welcome to <span>Student Support</span>
             </h1>
             <p>
-              Empowering students to succeed with Jobs, Internships, Resume
-              Building, Interview Preparation, mentorship, resources, and career
-              guidance.
+              Empowering students with resources for jobs, internships, resume building, interview preparation, mentorship, and career guidance.
             </p>
-            <button className="cta-button">Get Started</button>
+            <button className="cta-button" onClick={() => scrollToSection('courses-container')}>
+              Explore Our Programs
+            </button>
           </div>
           <div className="image-slider">
             <img
               src={images[currentImageIndex]}
-              alt={`Slide ${currentImageIndex + 1}`}
+              alt={`Slide ${currentImageIndex + 1}`} // Fixed the alt text syntax
             />
             <div className="slider-controls">
               <button onClick={prevImage}>❮</button>
@@ -57,29 +75,16 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Highlights Section */}
-      <section className="highlights-section">
-        <h2 className="section-heading">Why Choose Us?</h2>
-        <div className="program-highlight">
-          <div className="program-info">
-            <h3>Expert Mentorship</h3>
-            <p>Gain insights from professionals who have excelled in their fields.</p>
-          </div>
-          <div className="program-details">
-            <h3>Comprehensive Resources</h3>
-            <p>Access top-notch study material, interview resources, and job prep.</p>
-          </div>
-        </div>
-      </section>
-
       {/* Courses Section */}
-      <section className="courses-container">
-        <h2 className="section-heading">Our Popular Subjects</h2>
+      <section id="courses-container" className="courses-container">
+        <h2 className="section-heading">
+          <center>Our Popular Subjects</center>
+        </h2>
         <div className="subjects-list">
           <div className="subject-card">
             <img
               className="subject-image"
-              src="https://img.icons8.com/ios-filled/100/000000/programming-language.png"
+              src="https://static.vecteezy.com/system/resources/thumbnails/025/399/762/small/programming-coding-icon-logo-design-template-vector.jpg"
               alt="Programming"
             />
             <h3>Programming</h3>
@@ -88,6 +93,12 @@ const Home = () => {
               <li>JavaScript</li>
               <li>Java</li>
             </ul>
+            <button
+              className="subject-button"
+              onClick={() => handleNavigate('/programming')}
+            >
+              Explore Programming
+            </button>
           </div>
           <div className="subject-card">
             <img
@@ -101,11 +112,38 @@ const Home = () => {
               <li>Routing</li>
               <li>Security</li>
             </ul>
+            <button
+              className="subject-button"
+              onClick={() => handleNavigate('/networking')}
+            >
+              Explore Networking
+            </button>
           </div>
+
           <div className="subject-card">
             <img
               className="subject-image"
-              src="https://img.icons8.com/ios-filled/100/000000/data-storage.png"
+              src="https://img.freepik.com/free-photo/futuristic-scene-with-high-tech-robot-used-construction-industry_23-2151329542.jpg?semt=ais_hybrid"
+              alt="Data Science"
+            />
+            <h3>Robotics</h3>
+            <ul>
+              <li>Robot Design</li>
+              <li>Human-Robot Interaction</li>
+              <li>Industrial Robotics</li>
+            </ul>
+            <button
+              className="subject-button"
+              onClick={() => handleNavigate('/robotics')}
+            >
+              Explore Robotics
+            </button>
+          </div>
+
+          <div className="subject-card">
+            <img
+              className="subject-image"
+              src="https://cdn-icons-png.flaticon.com/512/4824/4824797.png"
               alt="Data Science"
             />
             <h3>Data Science</h3>
@@ -114,9 +152,41 @@ const Home = () => {
               <li>Data Analysis</li>
               <li>Data Visualization</li>
             </ul>
+            <button
+              className="subject-button"
+              onClick={() => handleNavigate('/data-science')}
+            >
+              Explore Data Science
+            </button>
           </div>
         </div>
       </section>
+
+      {/* Mentorship Section */}
+      <section id="mentorship-container" className="mentorship-container">
+        <div className="mentorship-content">
+          <div className="mentorship-image">
+            {/* Replace the image URL with your own image path */}
+            <img
+              src="https://media.istockphoto.com/id/533241382/vector/mentoring-chart-with-keywords-and-icons-sketch.jpg?s=612x612&w=0&k=20&c=jrmrfgr8bVFD54ORCkgzt5GpldwHVxvQiwl8g1tOUGA="
+              alt="Mentorship"
+            />
+          </div>
+          <div className="mentorship-text">
+            <h2>Join Our Mentorship Program</h2>
+            <p>Get personalized guidance from industry experts to boost your career. Our mentorship program offers valuable insights, support, and networking opportunities.</p>
+            <button
+              className="explore-button"
+              onClick={() => handleNavigate('/mentorship')} // Navigate to Mentorship page
+            >
+              Explore Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* You may not need to render Courses here unless you specifically need it */}
+      {Courses && <Courses />}
     </div>
   );
 };
