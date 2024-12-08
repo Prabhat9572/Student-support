@@ -1,54 +1,286 @@
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-}
-
-/* Home Page Container */
+/* Main Container */
 .home-container {
-  width: 100%;
-  margin: 0 auto;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #ffffff;
+  background-color: #121212;
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
 /* Hero Section */
 .hero-section {
-  background-color: white;
-  color: #333;
-  padding: 80px 20px;
-  text-align: center;
+  background: linear-gradient(90deg, #d88cf2, #f69c0c);
+  padding: 60px 20px;
 }
 
-.hero-section h1 {
-  font-size: 3.5rem;
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
   margin-bottom: 20px;
+  color: #ffdd59;
 }
 
-.hero-section h1 span {
-  color: #f39c12;
+.hero-text h1 span {
+  color: #2316d7;
 }
 
-.hero-section p {
+.hero-text p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #f0f0f0;
 }
 
 .cta-button {
-  background-color: #f39c12;
-  color: #fff;
-  padding: 10px 20px;
+  background-color: #0078ff;
+  color: #ffffff;
+  padding: 12px 30px;
   font-size: 1.1rem;
-  text-decoration: none;
-  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #e67e22;
+  background-color: #f031c6;
+  transform: translateY(-3px);
 }
 
+.image-slider {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  max-width: 600px;
+}
+
+.image-slider img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.slider-controls button {
+  background-color: hsl(0, 0%, 1%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+  background-color: #ff7e5f;
+  color: #ffffff;
+}
+
+.mentorship-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: lavender;
+}
+
+.mentorship-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.mentorship-image img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.mentorship-text {
+  max-width: 500px;
+}
+
+.mentorship-text h2 {
+  font-size: 2rem;
+  color: black;
+}
+
+.mentorship-text p {
+  font-size: 1rem;
+  color: black;
+  margin-top: 1rem;
+}
+
+.explore-button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/* Courses Section */
+.courses-container {
+  padding: 60px 20px;
+  background: linear-gradient(120deg, hwb(120 97% 2%), #efe2f5);
+  color: white;
+}
+
+.subjects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Reduced gap for a more compact layout */
+}
+
+.subject-card {
+  background-color: hsla(163, 87%, 9%, 0.936);
+  border: 1px solid #13010133;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
+  width: 200px; /* Reduced width for a smaller card */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px); /* Slightly reduced hover movement */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+}
+
+.subject-image {
+  width: 80px; /* Reduced size of the image */
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
+
+.subject-card h3 {
+  font-size: 1.3rem; /* Slightly smaller font for title */
+  margin-bottom: 10px;
+  color: #ffd700;
+  text-transform: uppercase; /* Added uppercase for a more dynamic look */
+  letter-spacing: 1px; /* Added spacing for readability */
+}
+
+.subject-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.subject-card ul li {
+  font-size: 0.85rem; /* Smaller font for list items */
+  margin: 6px 0;
+  color: #ffffff;
+}
+
+.subject-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px; /* Slightly reduced padding */
+  margin-top: 10px;
+  border-radius: 25px; /* Rounded edges for a modern touch */
+  cursor: pointer;
+  font-size: 12px; /* Smaller button text */
+  transition: background-color 0.3s ease;
+}
+
+.subject-button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 992px) {
+  .subject-card {
+    width: 180px; /* Further reduced size for tablets */
+    max-width: 250px; /* Maximum width limit */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .subject-card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .subject-card h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Buttons for Subject Cards */
+.subject-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.subject-button:hover {
+  background-color: #45a049;
+}

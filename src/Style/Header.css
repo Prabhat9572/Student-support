@@ -1,36 +1,50 @@
-.devfest-header {
-  background-color: #fff;
-  border-bottom: 2px solid #eee;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* General styling */
+.studentsupport-header {
+  background-color: lavender; /* Light gray background for a clean look */
+  padding: 10px 15px;
   position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
+  left: 0;
   z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  border-bottom: 1px solid black; /* Adds a subtle border at the bottom */
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 40px;
-  margin-right: 10px;
-}
-
-.logo span {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
-  color: #ff5722;
+  color: black; /* Darker gray for a professional look */
+}
+
+/* Toggle button for mobile view */
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: black; /* Dark gray for a sophisticated look */
+  margin: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Navbar Menu */
+.nav-menu {
+  display: flex;
+  gap: 20px;
 }
 
 .nav-menu ul {
@@ -40,21 +54,23 @@
   padding: 0;
 }
 
-.nav-menu ul li {
-  margin: 0 15px;
+.nav-menu li {
+  margin: 0;
 }
 
-.nav-menu ul li a {
+.nav-menu li a {
   text-decoration: none;
+  color: #495057; /* Lighter gray for text */
   font-size: 16px;
-  color: #333;
-  transition: color 0.3s;
+  padding: 10px;
+  transition: color 0.3s ease;
 }
 
-.nav-menu ul li a:hover {
-  color: #ff5722;
+.nav-menu li a:hover {
+  color: orangered; /* A professional shade of blue on hover */
 }
 
+<<<<<<< HEAD
 .cta-button .btn-register {
   background-color: hwb(20 16% 29%);
   color: #fff;
@@ -70,22 +86,51 @@
 }
 
 /* Responsive Design */
+=======
+/* Responsive Menu */
+>>>>>>> 26dc27145fbc46343359acd16573c3a1106c41b5
 @media (max-width: 768px) {
-  .header-container {
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;  /* Align items to the left */
+    display: none;
+    transition: transform 0.3s ease-in-out; /* Add transition for sliding effect */
+    transform: translateY(-100%); /* Initially hidden off-screen */
+  }
+
+  .nav-menu.open {
+    display: flex;
+    transform: translateY(0); /* Bring items back into view */
   }
 
   .nav-menu ul {
     flex-direction: column;
-    text-align: center;
+    gap: 15px;
+    width: 100%;  /* Ensure it fills the full screen width */
   }
 
-  .nav-menu ul li {
-    margin: 10px 0;
+  .nav-menu li a {
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;  /* Full-width links */
+    text-align: left;  /* Align text to the left */
   }
 
-  .cta-button {
-    margin-top: 10px;
+  .sign-in-button {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
   }
 }
