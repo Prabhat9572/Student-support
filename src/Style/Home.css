@@ -9,17 +9,53 @@
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(90deg, #d88cf2, #f69c0c);
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: hidden;
   padding: 60px 20px;
+  background: linear-gradient(90deg, #d88cf2, #f69c0c);
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: sliderAnimation 9s infinite;
+}
+
+@keyframes sliderAnimation {
+  0% {
+    background-image: url('https://cdn-blog.novoresume.com/articles/student-services-specialist/bg.png');
+  }
+  33% {
+    background-image: url('https://cmsv2-assets.apptegy.net/uploads/2799/file/1680619/b8e19e3c-760b-41c9-8d3d-336f53a12b56.png');
+  }
+  66% {
+    background-image: url('https://fsb.ac.uk/wp-content/uploads/2017/03/9142427_1467128977.jpg');
+  }
+  100% {
+    background-image: url('https://cdn-blog.novoresume.com/articles/student-services-specialist/bg.png');
+  }
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 50px 20px;
 }
 
 .hero-text {
@@ -31,6 +67,7 @@
   font-size: 3rem;
   margin-bottom: 20px;
   color: #ffdd59;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero-text h1 span {
@@ -39,14 +76,17 @@
 
 .hero-text p {
   font-size: 1.2rem;
+  margin-top: 20px;
   margin-bottom: 30px;
   color: #f0f0f0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .cta-button {
-  background-color: #0078ff;
-  color: #ffffff;
+  margin-top: 20px;
   padding: 12px 30px;
+  background-color: #0078ff;
+  color: white;
   font-size: 1.1rem;
   font-weight: 600;
   border: none;
@@ -100,6 +140,7 @@
   color: #ffffff;
 }
 
+/* Mentorship Section */
 .mentorship-container {
   display: flex;
   justify-content: center;
@@ -154,9 +195,6 @@
   background-color: #0056b3;
 }
 
-
-
-
 /* Courses Section */
 .courses-container {
   padding: 60px 20px;
@@ -168,7 +206,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Reduced gap for a more compact layout */
+  gap: 20px;
 }
 
 .subject-card {
@@ -176,20 +214,20 @@
   border: 1px solid #13010133;
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
-  width: 200px; /* Reduced width for a smaller card */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  width: 200px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .subject-card:hover {
-  transform: translateY(-5px); /* Slightly reduced hover movement */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .subject-image {
-  width: 80px; /* Reduced size of the image */
+  width: 80px;
   height: 80px;
   object-fit: cover;
   margin-bottom: 15px;
@@ -197,11 +235,11 @@
 }
 
 .subject-card h3 {
-  font-size: 1.3rem; /* Slightly smaller font for title */
+  font-size: 1.3rem;
   margin-bottom: 10px;
   color: #ffd700;
-  text-transform: uppercase; /* Added uppercase for a more dynamic look */
-  letter-spacing: 1px; /* Added spacing for readability */
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .subject-card ul {
@@ -210,7 +248,7 @@
 }
 
 .subject-card ul li {
-  font-size: 0.85rem; /* Smaller font for list items */
+  font-size: 0.85rem;
   margin: 6px 0;
   color: #ffffff;
 }
@@ -219,11 +257,11 @@
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 8px 16px; /* Slightly reduced padding */
+  padding: 8px 16px;
   margin-top: 10px;
-  border-radius: 25px; /* Rounded edges for a modern touch */
+  border-radius: 25px;
   cursor: pointer;
-  font-size: 12px; /* Smaller button text */
+  font-size: 12px;
   transition: background-color 0.3s ease;
 }
 
@@ -231,10 +269,11 @@
   background-color: #45a049;
 }
 
+/* Media Queries */
 @media (max-width: 992px) {
   .subject-card {
-    width: 180px; /* Further reduced size for tablets */
-    max-width: 250px; /* Maximum width limit */
+    width: 180px;
+    max-width: 250px;
   }
 }
 
@@ -251,36 +290,4 @@
   .subject-card h3 {
     font-size: 1.4rem;
   }
-}
-
-
-@media (max-width: 768px) {
-  .section-heading {
-    font-size: 2rem;
-  }
-
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-
-  .subject-card h3 {
-    font-size: 1.6rem;
-  }
-}
-
-/* Buttons for Subject Cards */
-.subject-button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.subject-button:hover {
-  background-color: #45a049;
 }
