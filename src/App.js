@@ -7,7 +7,7 @@ import Home from './components/Home';
 import Speakers from './components/Speakers';
 import Contact from './components/Contact'; // Ensure Contact component exists and path is correct
 import Footer from './components/Footer';
-import Product from './components/product'; // Use Product (singular) here
+import Internship from './components/internship'; // Use Product (singular) here
 
 const App = () => {
   return (
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/product" element={<Product />} /> Use Product here
+          <Route path="/internship" element={<Internship />} /> Use Product here
         </Routes>
 
         {/* footer section */}
