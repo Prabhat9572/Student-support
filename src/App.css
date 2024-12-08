@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: Arial, sans-serif; /* Ensures a clean and modern look */
 }
 
 .App-logo {
@@ -15,6 +16,9 @@
 
 .App-header {
   background-color: #282c34;
+  background-image: url('C:\Users\Pratima Kumari\OneDrive\Desktop\rapo\student-support\IMG\OIP (1).jpg'); /* Add your image path here */
+  background-size: cover; /* Ensures the image covers the entire header */
+  background-position: center; /* Centers the image */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,10 +26,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for better text readability */
 }
 
 .App-link {
   color: #61dafb;
+  font-weight: bold; /* Makes links stand out */
+  text-decoration: none; /* Removes default underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.App-link:hover {
+  color: #21a1f1; /* Changes color on hover */
 }
 
 @keyframes App-logo-spin {

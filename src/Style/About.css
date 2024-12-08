@@ -8,57 +8,52 @@ body {
 
 /* About Container */
 .about-container {
-  padding: 20px;
-  background: #f9f9f9;
-}
-
-/* Hero Section */
-.hero-section {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.hero-text {
-  max-width: 50%;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('https://th.bing.com/th/id/OIP.jxgcO4kGg29mLMQadCXelwHaE0?w=243&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #2c3e50;
+  padding: 20px;
 }
 
-.hero-text h1 span {
+/* Right Section (Text) */
+.right-section {
+  background: rgba(249, 249, 249, 0.85); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.right-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
   color: #3498db;
 }
 
-.hero-text p {
+.right-section p {
   font-size: 1.2rem;
   color: #7f8c8d;
-  margin-top: 10px;
   line-height: 1.6;
-}
-
-.hero-image {
-  max-width: 40%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 /* Features Section */
 .features {
-  margin: 40px auto;
-  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.); /* Transparent white */
+  border-radius: 10px;
 }
 
 .features h2 {
   font-size: 2rem;
   color: #34495e;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -70,12 +65,13 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9); /* Almost opaque */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  width: 300px;
+  flex: 1;
+  max-width: 300px;
   transition: transform 0.3s;
 }
 
@@ -88,7 +84,6 @@ body {
 .card p {
   font-size: 1rem;
   color: #7f8c8d;
-  line-height: 1.6;
 }
 
 .card:hover {
@@ -97,22 +92,134 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .right-section h1 {
+    font-size: 2rem;
+  }
+
+  .right-section p {
+    font-size: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
+  .about-container {
+    padding: 10px;
   }
 
-  .hero-text {
-    max-width: 100%;
+  .right-section {
+    padding: 20px;
   }
 
-  .hero-image {
-    max-width: 80%;
-    margin-top: 20px;
+  .features h2 {
+    font-size: 1.8rem;
   }
 
   .feature-cards {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .right-section p {
+    font-size: 0.9rem;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Section with Images on the Left and Text on the Right */
+.new-section-images-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
+
+/* Left Section (Images) */
+.image-gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Section (Text) */
+.text-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.text-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* Responsive Design for Images-Text Section */
+@media (max-width: 768px) {
+  .new-section-images-text {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .text-section {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .text-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-section p {
+    font-size: 0.9rem;
   }
 }
