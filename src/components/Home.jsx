@@ -88,14 +88,14 @@ const Home = () => {
               alt="Programming"
             />
             <h3>Programming</h3>
-            <ul>
+            {/* <ul>
               <li>Python</li>
               <li>JavaScript</li>
               <li>Java</li>
-            </ul>
+            </ul> */}
             <button
               className="subject-button"
-              onClick={() => handleNavigate('/programming')}
+              onClick={() => handleNavigate('/Programming')}
             >
               Explore Programming
             </button>
@@ -107,14 +107,14 @@ const Home = () => {
               alt="Networking"
             />
             <h3>Networking</h3>
-            <ul>
+            {/* <ul>
               <li>TCP/IP</li>
               <li>Routing</li>
               <li>Security</li>
-            </ul>
+            </ul> */}
             <button
               className="subject-button"
-              onClick={() => handleNavigate('/networking')}
+              onClick={() => handleNavigate('/Networking')}
             >
               Explore Networking
             </button>
@@ -127,11 +127,11 @@ const Home = () => {
               alt="Data Science"
             />
             <h3>Robotics</h3>
-            <ul>
+            {/* <ul>
               <li>Robot Design</li>
               <li>Human-Robot Interaction</li>
               <li>Industrial Robotics</li>
-            </ul>
+            </ul> */}
             <button
               className="subject-button"
               onClick={() => handleNavigate('/robotics')}
@@ -147,17 +147,17 @@ const Home = () => {
               alt="Data Science"
             />
             <h3>Data Science</h3>
-            <ul>
+            {/* <ul>
               <li>Machine Learning</li>
               <li>Data Analysis</li>
               <li>Data Visualization</li>
-            </ul>
-            <button
-              className="subject-button"
-              onClick={() => handleNavigate('/data-science')}
-            >
-              Explore Data Science
-            </button>
+            </ul> */}
+           <button
+  className="explore-button"
+  onClick={() => handleNavigate('/Datascience')} // Navigate to Datascience page
+>
+  Explore Data Science
+</button>
           </div>
         </div>
       </section>
