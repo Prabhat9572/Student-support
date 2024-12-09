@@ -9,10 +9,12 @@ import Contact from './components/Contact'; // Ensure the path is correct
 import Footer from './components/Footer'; // Ensure the path is correct
 import Internship from './components/internship'; // Note the lowercase 'p'
 import Mentorship from './Pages/Mentorship'; // Ensure the path is correct
+import FormPage from './Pages/Formpage';
 
 const App = () => {
   return (
-    <Router>
+    <Router> 
+
       <div>
         {/* Rendering Header component */}
         <Header />
@@ -27,6 +29,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/internship" element={<Internship />} />
           <Route path="/mentorship" element={<Mentorship />} /> {/* Added Mentorship Route */}
+          <Route path="/formpage" element={<FormPage />} /> {/* Added Mentorship Route */}
+
         </Routes>
 
         {/* Footer Section */}

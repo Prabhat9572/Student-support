@@ -12,11 +12,11 @@ body {
 
 /* Header Section */
 .product-header {
-  background-image: url('https://wallpaperaccess.com/full/11071388.jpg'); /* Set the background image */
-  background-size: cover; /* Ensure the background covers the entire header */
-  background-position: center; /* Center the background image */
+  background-image: url('https://wallpaperaccess.com/full/11071388.jpg');
+  background-size: cover;
+  background-position: center;
   color: #fff;
-  padding: 200px 20px;
+  padding: 300px 20px; /* Adjusted padding for better mobile experience */
   text-align: center;
 }
 
@@ -28,7 +28,7 @@ body {
 .header-content p {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #f7f3f3; 
+  color: #f7f3f3;
 }
 
 /* Internship Sections */
@@ -46,34 +46,38 @@ body {
 /* Internship Cards Section */
 .internship-cards {
   display: flex;
-  justify-content: center; /* Center align the cards */
-  gap: 20px; /* Space between cards */
-  flex-wrap: wrap; /* Allow cards to wrap when needed */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .product-card {
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px; /* Slightly more rounded corners */
-  width: 300px; /* Fixed width for consistent layout */
-  max-width: 100%; /* Ensure it doesn't overflow */
+  border-radius: 8px;
+  width: 300px; /* Default width */
+  max-width: 100%;
   text-align: center;
   padding: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto; /* Flexible height for consistent layout */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s ease;
-  margin-bottom: 20px; /* Space below the card */
+  margin-bottom: 20px;
 }
 
-
-
 .product-card:hover {
-  transform: translateY(-5px); /* Slight lift effect on hover */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 .product-image {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -89,91 +93,10 @@ body {
   color: #555;
   margin-bottom: 20px;
   line-height: 1.4;
-}
-
-.product-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 300px;
-  max-width: 100%;
-  text-align: center;
-  padding: 20px;
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: space-between; /* Push content to top and bottom */
-  height: 100%; /* Make all cards the same height */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s ease;
-  margin-bottom: 20px;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-}
-
-.apply-button {
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 20px; /* Add some spacing above the button */
-  transition: background-color 0.3s ease;
-}
-
-.apply-button:hover {
-  background-color: #0056b3;
-}
-
-.product-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 300px; /* Fixed width for consistent layout */
-  height: 500px; /* Fixed height for consistent layout */
-  max-width: 100%;
-  text-align: center;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s ease;
-  margin-bottom: 20px;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-}
-
-.product-image {
-  width: 100%;
-  height: 200px; /* Consistent image height */
-  object-fit: cover; /* Ensures images fit without distortion */
-  border-radius: 5px;
-}
-
-.internship-title, .internchip-title, .product-title {
-  font-size: 1.6rem;
-  margin: 15px 0;
-  color: #333;
-  font-weight: 600;
-}
-
-.internship-description, .product-description {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
-  line-height: 1.4;
-  overflow: hidden; /* Prevent overflowing content */
+  overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Limit text to 3 lines */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -192,23 +115,57 @@ body {
   background-color: #0056b3;
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .internship-cards {
+    gap: 15px; /* Reduced gap for smaller screens */
+  }
+
   .product-card {
-    width: 45%; /* Two cards per row on medium screens */
+    width: 48%; /* Two cards per row on medium screens */
   }
 }
 
 @media (max-width: 768px) {
   .product-card {
-    width: 45%; /* Two cards per row */
+    width: 90%; /* Single card per row for tablets */
+  }
+
+  .product-header {
+    padding: 150px 20px; /* Reduced padding for smaller headers */
+  }
+
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  .header-content p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .product-card {
-    width: 90%; /* Single card per row on small screens */
+    width: 100%; /* Full-width cards for smaller screens */
+    margin-bottom: 15px; /* Adjust spacing */
   }
+
+  .product-header {
+    padding: 120px 10px; /* Optimized padding for very small devices */
+  }
+
+  .header-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+  }
+
+  .apply-button {
+    padding: 8px 15px; /* Smaller button for mobile */
+  }
+
+
+
 }
