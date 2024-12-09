@@ -10,6 +10,10 @@ import Footer from './components/Footer'; // Ensure the path is correct
 import Internship from './components/internship'; // Note the lowercase 'p'
 import Mentorship from './Pages/Mentorship'; // Ensure the path is correct
 import FormPage from './Pages/Formpage';
+import Robotics from './Pages/Robotics';
+import Networking from './Pages/Networking';
+import Programming from './Pages/Programming';
+import Datascience from './Pages/Datascience'; // Ensure the path is correct
 
 const App = () => {
   return (
@@ -30,6 +34,10 @@ const App = () => {
           <Route path="/internship" element={<Internship />} />
           <Route path="/mentorship" element={<Mentorship />} /> {/* Added Mentorship Route */}
           <Route path="/formpage" element={<FormPage />} /> {/* Added Mentorship Route */}
+          <Route path="/robotics" element={<Robotics />} />
+          <Route path="/networking" element={<Networking />} /> {/* Added Networking Route */}
+          <Route path="/programming" element={<Programming />} />
+          <Route path="/datascience" element={<Datascience />} /> {/* Added Datascience Route */}
 
         </Routes>
 
