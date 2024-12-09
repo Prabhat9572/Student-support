@@ -55,3 +55,23 @@
   margin: 10px 0;
   color: #555;
 }
+/* Styling for the Explore Now Button */
+.explore-now-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.explore-now-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-now-btn:hover {
+  background-color: #218838;
+}

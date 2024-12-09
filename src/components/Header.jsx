@@ -23,7 +23,7 @@ const Header = () => {
         <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/internship">internship Program</Link></li>
+            <li><Link to="/internship">internship</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/schedule">Schedule</Link></li>
             <li><Link to="/speakers">Speakers</Link></li>
@@ -31,9 +31,7 @@ const Header = () => {
           </ul>
         </nav>
         
-        <div className="cta-button">
-          <a href="#register" className="btn-register">Sign In</a>
-        </div>
+       
       </div>
     </header>
   );
