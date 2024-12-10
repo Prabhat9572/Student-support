@@ -14,6 +14,9 @@ import Robotics from './Pages/Robotics';
 import Networking from './Pages/Networking';
 import Programming from './Pages/Programming';
 import Datascience from './Pages/Datascience'; // Ensure the path is correct
+import MentorshipRegistration from './Pages/MentorshipRegistration';
+import CoursesSubjects from './Pages/CoursesSubjects'; // Ensure the path is correct
+
 
 const App = () => {
   return (
@@ -38,6 +41,8 @@ const App = () => {
           <Route path="/networking" element={<Networking />} /> {/* Added Networking Route */}
           <Route path="/programming" element={<Programming />} />
           <Route path="/datascience" element={<Datascience />} /> {/* Added Datascience Route */}
+          <Route path="/mentorshipRegistration" element={<MentorshipRegistration />} />
+          <Route path="/coursesSubjects" element={<CoursesSubjects />} /> {/* Added Courses Subject Route */}
 
         </Routes>
 
