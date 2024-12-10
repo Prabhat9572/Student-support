@@ -42,7 +42,8 @@ const App = () => {
           <Route path="/programming" element={<Programming />} />
           <Route path="/datascience" element={<Datascience />} /> {/* Added Datascience Route */}
           <Route path="/mentorshipRegistration" element={<MentorshipRegistration />} />
-          <Route path="/coursesSubjects" element={<CoursesSubjects />} /> {/* Added Courses Subject Route */}
+          {/* <Route path="/" element={<Courses />} /> */}
+          <Route path="/courses-subjects" element={<CoursesSubjects />} />
 
         </Routes>
 
