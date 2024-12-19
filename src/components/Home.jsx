@@ -162,6 +162,9 @@ const Home = () => {
         </div>
       </section>
 
+        {/* You may not need to render Courses here unless you specifically need it */}
+        {Courses && <Courses />}
+
       {/* Mentorship Section */}
       <section id="mentorship-container" className="mentorship-container">
         <div className="mentorship-content">
@@ -185,8 +188,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* You may not need to render Courses here unless you specifically need it */}
-      {Courses && <Courses />}
+    
     </div>
   );
 };
