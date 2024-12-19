@@ -11,6 +11,9 @@ import Internship from './components/internship'; // Note the lowercase 'p'
 import Mentorship from './Pages/Mentorship'; // Ensure the path is correct
 import FormPage from './Pages/Formpage';
 
+import UserProfile from './Pages/Userprofile';
+
+
 const App = () => {
   return (
     <Router> 
@@ -29,7 +32,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/internship" element={<Internship />} />
           <Route path="/mentorship" element={<Mentorship />} /> {/* Added Mentorship Route */}
-          <Route path="/formpage" element={<FormPage />} /> {/* Added Mentorship Route */}
+          <Route path="/formpage" element={<FormPage />} /> 
+          <Route path="/profile" element={<UserProfile />} />
 
         </Routes>
 

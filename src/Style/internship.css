@@ -96,7 +96,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -165,7 +164,50 @@ body {
   .apply-button {
     padding: 8px 15px; /* Smaller button for mobile */
   }
+}
 
+/* Certificate Section Styles */
+.certificate-section {
+  margin: 40px 20px;
+}
 
+.certificate-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
 
+.certificate-container {
+  display: flex;
+  flex-direction: row; /* Arrange items in a row */
+  align-items: center; /* Vertically align items */
+  gap: 20px; /* Space between the image and text */
+}
+
+.certificate-image {
+  max-width: 300px; /* Limit the width of the image */
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #ccc; /* Optional: Add a border */
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.certificate-text {
+  flex: 1; /* Take up the remaining space */
+  font-size: 1.1rem; /* Adjust text size */
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificate-container {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .certificate-image {
+    max-width: 200px; /* Reduce image size on smaller screens */
+  }
 }
