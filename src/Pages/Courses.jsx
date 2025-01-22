@@ -12,6 +12,11 @@ const Courses = () => {
       route: '/computer-science',
     },
     {
+      name: 'Computer Science',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png',
+      route: '/computer-science',
+    },
+    {
       name: 'Business & Management',
       image: 'https://cdn-icons-png.flaticon.com/512/2834/2834892.png',
       route: '/business-management',

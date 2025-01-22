@@ -79,6 +79,7 @@ const CoursesSubjects = () => {
       image: 'https://cdn-icons-png.flaticon.com/512/1024/1024714.png',
       route: '/chemistry',
     },
+    
   ];
 
   return (
@@ -89,7 +90,7 @@ const CoursesSubjects = () => {
           <div className="subject-card" key={index}>
             <img src={subject.image} alt={subject.name} className="subject-image" />
             <h3>{subject.name}</h3>
-            <Link to={subject.route} className="explore-link">Explore More</Link>
+            <Link to={subject.route} className="explore-link">         Explore More</Link>
           </div>
         ))}
       </div>

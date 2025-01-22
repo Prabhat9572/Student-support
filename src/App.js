@@ -10,12 +10,14 @@ import Footer from './components/Footer'; // Ensure the path is correct
 import Internship from './components/internship'; // Note the lowercase 'p'
 import Mentorship from './Pages/Mentorship'; // Ensure the path is correct
 import FormPage from './Pages/Formpage';
+
+import UserProfile from './Pages/Userprofile';
+import Datascience from './Pages/Datascience';
 import Robotics from './Pages/Robotics';
-import Networking from './Pages/Networking';
 import Programming from './Pages/Programming';
-import Datascience from './Pages/Datascience'; // Ensure the path is correct
-import MentorshipRegistration from './Pages/MentorshipRegistration';
-import CoursesSubjects from './Pages/CoursesSubjects'; // Ensure the path is correct
+import Networking from './Pages/Networking';
+import CoursesSubjects from './Pages/CoursesSubjects';
+
 
 
 const App = () => {
@@ -36,14 +38,17 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/internship" element={<Internship />} />
           <Route path="/mentorship" element={<Mentorship />} /> {/* Added Mentorship Route */}
-          <Route path="/formpage" element={<FormPage />} /> {/* Added Mentorship Route */}
-          <Route path="/robotics" element={<Robotics />} />
+          <Route path="/formpage" element={<FormPage />} /> 
+          <Route path="/datascience" element={<Datascience />} />
+          <Route path="/profile" element={<UserProfile />} />
+          <Route path="/robotics" element={<Robotics />} /> {/* Added Robotics Route */}
+          <Route path="/programming" element={<Programming />} /> {/* Added Programming Route */}
           <Route path="/networking" element={<Networking />} /> {/* Added Networking Route */}
-          <Route path="/programming" element={<Programming />} />
-          <Route path="/datascience" element={<Datascience />} /> {/* Added Datascience Route */}
-          <Route path="/mentorshipRegistration" element={<MentorshipRegistration />} />
-          {/* <Route path="/" element={<Courses />} /> */}
-          <Route path="/courses-subjects" element={<CoursesSubjects />} />
+          <Route path="/courses-subjects" element={<CoursesSubjects />} /> {/* Added Courses Subjects Route */}
+         
+           
+
+          
 
         </Routes>
 

@@ -53,7 +53,7 @@ const Home = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1>
-              Welcome to <span>Student Support</span>
+              Teach the  <span>World</span> Online
             </h1>
             <p>
               Empowering students with resources for jobs, internships, resume building, interview preparation, mentorship, and career guidance.
